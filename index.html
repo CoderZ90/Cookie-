@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet"/>
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="imgBox">
+                <img src="./cookie.svg" alt="">
+            </div>
+            <div class="title">Cookie Consent</div>
+            <div class="content">
+                <p>This website use cookies to ensure you get the best experience on our website.</p>
+            </div>
+            <div class="button">
+                <button class="btn btn1">Understood. Yum!</button>
+                <button class="btn btn2">Learn More</button>
+            </div>
+        </div>
+        <!-- Javascript Part -->
+        <script>
+            const cookieBox = document.querySelector('.wrapper'),
+                activeBtn = cookieBox.querySelector('.button');
+
+            activeBtn.onclick = () => { // setting expiry date for cookie :D
+                document.cookie = "CookieBy=Fire; max-age=" + 60 * 60 * 24 * 30;
+                if (document.cookie) {
+                    cookieBox.classList.add('hide');
+                } else {
+                    alert('Oh no! Cookie Was Blocked It Cant be set . please unblock it')
+                }
+                // 60 seconds * 60 min * 24hr * 30
+                // the cookie is still visible even it is set :) lets code for it
+            };
+            let cookieCheck = document.cookie.indexOf("CookieBy=Fire");
+            cookieCheck != -1 ? cookieBox.classList.add('hide') : cookieBox.classList.remove('hide');
+        </script>
+    </body>
+</html>

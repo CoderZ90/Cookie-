@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: #7d5fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    position: fixed;
+    background: #fff;
+    padding: 8px;
+    width: 400px;
+    height: 360px;
+    border-radius: 10px;
+    bottom: 20px;
+    transition: 0.3s ease;
+    left: 30px;
+}
+
+.wrapper.hide {
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.wrapper .imgBox {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.imgBox img {
+    position: relative;
+    width: 130px;
+    height: 130px;
+}
+
+.title {
+    margin-top: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 500;
+}
+
+.content {
+    text-align: center;
+}
+
+.content p {
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.button {
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.button .btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background: #7d5fff;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;    
+}
+
+.button .btn2 {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background: none;
+    border: none;
+    outline: none;
+    color: #7d5fff;
+    font-size: 16px !important;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;   
+} 
+
+/* Bonus Code :D */
+
+::selection {
+    background: #7d5fff;
+    color: #fff;
+}
